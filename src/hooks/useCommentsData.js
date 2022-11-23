@@ -3,7 +3,6 @@ import { URL_API } from '../api/const';
 import { tokenContext } from '../context/tokenContext';
 
 export const useCommentsData = (id) => {
-  console.log('id in hook: ', id);
   const { token } = useContext(tokenContext);
   const [commentsData, setCommentsData] = useState([]);
 

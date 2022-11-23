@@ -12,12 +12,8 @@ export const Modal = ({ id, closeModal }) => {
   const [isFormCommentOpen, setIsFormCommentOpen] = useState(false);
 
   const [commentsData] = useCommentsData(id);
-  console.log('commentsData: ', commentsData);
   const [post, comments] = [...commentsData];
 
-  console.log('post: ', post);
-
-  console.log('comments: ', comments);
   const overlayRef = useRef(null);
   const iconRef = useRef(null);
 
