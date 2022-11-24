@@ -8,15 +8,19 @@ export const ContentPost = ({ id, title, author }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
-    <div className={style.content} onClick={() => {
-      setIsModalOpen(true);
-    }}>
+    // <div className={style.content} onClick={() => {
+    //   setIsModalOpen(true);
+    // }}>
+    <div className={style.content}>
       <Text As='h2' className={style.title}>
         <Text As='a'
           size={18}
           tsize={24}
           className={style.linkPost}
           href='#post'
+          onClick={() => {
+            setIsModalOpen(true);
+          }}
         >
           {title}
         </Text>

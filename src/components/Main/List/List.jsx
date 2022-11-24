@@ -5,6 +5,8 @@ import Post from './Post';
 
 export const List = () => {
   const { popularPosts } = useContext(postsContext);
+  const posts = popularPosts.filter(item => item.kind !== 'more');
+
   // const postsData = [
   //   {
   //     thumbnail: '',
@@ -42,7 +44,7 @@ export const List = () => {
 
   return (
     <ul className={style.list}>
-      {popularPosts.map((postData) => (
+      {posts.map((postData) => (
         <Post key={postData.data.id} dataPost={postData.data} />
       ))}
     </ul>
