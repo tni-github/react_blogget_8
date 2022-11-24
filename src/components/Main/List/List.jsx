@@ -5,7 +5,9 @@ import Post from './Post';
 
 export const List = () => {
   const { popularPosts } = useContext(postsContext);
+  console.log('popularPosts: ', popularPosts);
   const posts = popularPosts.filter(item => item.kind !== 'more');
+
 
   // const postsData = [
   //   {
