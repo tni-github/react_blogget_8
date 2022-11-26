@@ -8,6 +8,10 @@ export const Comments = ({ comments }) => {
     return <div className={style.list}>No comments yet</div>;
   }
 
+  if (comments.length !== 0 && !comments[comments.length - 1].subreddit_id) {
+    comments.pop();
+  }
+
   return (
     <ul className={style.list}>
       {
