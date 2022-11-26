@@ -5,11 +5,6 @@ import Post from './Post';
 
 export const List = () => {
   const { popularPosts } = useContext(postsContext);
-  console.log('popularPosts: ', popularPosts);
-  if (popularPosts.length !== 0 &&
-    popularPosts[popularPosts.length - 1].kind === 'more') {
-    popularPosts.pop();
-  }
 
   // const posts = popularPosts.filter(item => item.kind !== 'more');
 

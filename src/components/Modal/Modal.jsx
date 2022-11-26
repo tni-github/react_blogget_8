@@ -13,8 +13,6 @@ export const Modal = ({ id, closeModal }) => {
 
   const [commentsData] = useCommentsData(id);
   const [post, comments] = [...commentsData];
-  console.log('post: ', post);
-  console.log('comments: ', comments);
 
   const overlayRef = useRef(null);
   const iconRef = useRef(null);
